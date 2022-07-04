@@ -7,7 +7,7 @@ import (
 	"golang.org/x/net/html"
 )
 
-func findLinks(url string) ([]string, error) {
+func FindLinks(url string) ([]string, error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err

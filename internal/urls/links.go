@@ -1,7 +1,8 @@
 package urls
 
 func Catalog() []string {
-	list := make([]string,
+	var list []string
+	list = append(list,
 		"https://yandex.ru",
 		"https://google.com",
 	)

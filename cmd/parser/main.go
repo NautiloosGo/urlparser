@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"os"
+
+	"github.com/NautiloosGo/urlparser/internal/finder"
 
 	"github.com/NautiloosGo/urlparser/internal/urls"
 )
@@ -18,7 +19,7 @@ func main() {
 
 		// поиск линков на странице
 		var answerlinks []string
-		answerlinks = Urlfinder(url)
+		answerlinks = finder.Urlfinder(url)
 		for _, link := range answerlinks {
 
 			fmt.Println(link)
@@ -26,10 +27,10 @@ func main() {
 	}
 }
 
-func urlfinder(url string) []string {
-	links, err := urls.FindLinks(url)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "parse: %v\n", err)
-	}
-	return links
-}
+// func urlfinder(url string) []string {
+// 	links, err := urls.FindLinks(url)
+// 	if err != nil {
+// 		fmt.Fprintf(os.Stderr, "parse: %v\n", err)
+// 	}
+// 	return links
+// }

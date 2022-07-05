@@ -24,5 +24,6 @@ func FindLinks(url string) ([]string, error) {
 		return nil, fmt.Errorf("parsing %s as HTML: %v", url, err)
 	}
 
-	return visit(nil, doc), nil // поиск ссылок в теле
+	return visit(nil, doc), nil
+
 }
